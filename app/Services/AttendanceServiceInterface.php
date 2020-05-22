@@ -11,7 +11,8 @@ interface AttendanceServiceInterface
     public function getEmployees(int $userId): array;
 
     /**
+     * @param int $userId
      * @return bool
      */
-    public function attendEmployee(): bool;
+    public function attendEmployee(int $userId): bool;
 }

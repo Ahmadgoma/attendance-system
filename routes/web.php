@@ -24,8 +24,8 @@ Route::group(['prefix' => 'attendance-dashboard'], function () {
 Route::group(['middleware' => 'auth', 'namespace' => 'Backend'], function () {
     Route::get('/', 'AdminController@index')->name('dashboard');
 
-    Route::resource('employees', 'EmployeeController')->except([
-        'edit', 'update', 'destroy','show'
+    Route::resource('employees', 'EmployeeController')->only([
+        'index', 'create','store'
     ]);
 
     Route::get('employees/attendance/{id}', 'AttendanceController@show')->name('employees.attendance');

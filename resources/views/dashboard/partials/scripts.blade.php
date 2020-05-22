@@ -9,13 +9,13 @@
         crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-<script src="{{asset('public/assets/admin/')}}/js/stisla.js"></script>
+<script src="{{asset('assets/admin/')}}/js/stisla.js"></script>
 
 <!-- JS Libraies -->
 @stack('scripts')
 
 <!-- Template JS File -->
-<script src="{{asset('public/assets/admin')}}/js/scripts.js"></script>
-<script src="{{asset('public/assets/admin')}}/js/custom.js"></script>
-<script src="{{asset('public/assets/admin')}}/js/index.js"></script>
-<script src="{{asset('public/assets/admin')}}/js/page/modules-datatables.js"></script>
+<script src="{{asset('assets/admin')}}/js/scripts.js"></script>
+<script src="{{asset('assets/admin')}}/js/custom.js"></script>
+<script src="{{asset('assets/admin')}}/js/index.js"></script>
+<script src="{{asset('assets/admin')}}/js/page/modules-datatables.js"></script>

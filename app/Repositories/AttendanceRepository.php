@@ -25,20 +25,41 @@ class AttendanceRepository implements AttendanceRepositoryInterface
      * @param int $userId
      * @return array
      */
-    public function getBy(int $userId):array
+    public function getAttendanceWorkByUserId(int $userId): array
     {
-        $result['sumMonthlyWork'] = DB::table('attendances')
+        $result['sumMonthlyWork'] = $this->getMonthlyWork($userId);
+
+        $result['dailyWork'] = $this->getDailyWork($userId);
+
+        return $result;
+    }
+
+    /**
+     * @param int $userId
+     * @return array
+     */
+    private function getMonthlyWork(int $userId): array
+    {
+        return DB::table('attendances')
             ->select
             (
-                DB::Raw('Month(check_in) as month') ,
+                DB::Raw('Month(check_in) as month'),
                 DB::Raw('SUM(TIMESTAMPDIFF(MINUTE,check_in,check_out) / 60)  as sumHours')
             )
             ->where('user_id', $userId)
             ->where('deleted_at', null)
             ->groupBy('month')
-            ->get()->toArray();
+            ->get()
+            ->toArray();
+    }
 
-        $result['dailyWork'] = DB::table('attendances')
+    /**
+     * @param int $userId
+     * @return array
+     */
+    private function getDailyWork(int $userId): array
+    {
+        return DB::table('attendances')
             ->select
             (
                 DB::Raw('TIME(check_in) as check_in_time'),
@@ -49,9 +70,8 @@ class AttendanceRepository implements AttendanceRepositoryInterface
             ->where('user_id', $userId)
             ->where('deleted_at', null)
             ->orderBy('check_in')
-            ->get()->toArray();
-
-        return $result;
+            ->get()
+            ->toArray();
     }
 
     /**

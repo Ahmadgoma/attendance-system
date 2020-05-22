@@ -25,8 +25,9 @@ copy .env.example and make new file .env
 then change DB_DATABASE=name of database in .env file.
 * Run these following commands:
 * $ composer install
-* php artisan migrate --seed
-* php artisan passport:install
+* $ php artisan migrate --seed
+* $ php artisan passport:install
+* $ php artisan serve
 
 #### You can manage employees in web view:
 ###### Dashboard "Admin Section"
@@ -84,5 +85,4 @@ Content-Type : application/json
 * use service orientated architecture to decouple code.
 * make service layer for domain logic.
 * make repository layer for query.
-* use dependency injection in service and controller. 
-* use query builder that is faster than eloquent orm. 
+* use dependency injection in service and controller.  

@@ -1,4 +1,4 @@
-@extends('backend.dashboard' , ['title' => 'Create Employee'])
+@extends('dashboard.dashboard' , ['title' => 'Create Employee'])
 @section('content')
     <div class="section-body">
         <h2 class="section-title tab-page">Employee</h2>

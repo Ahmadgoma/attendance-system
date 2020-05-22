@@ -12,6 +12,6 @@ class AdminController extends Controller
      */
     public function index():View
     {
-        return view('backend.dashboard');
+        return view('dashboard.dashboard');
     }
 }

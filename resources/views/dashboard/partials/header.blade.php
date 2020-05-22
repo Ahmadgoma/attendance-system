@@ -13,6 +13,6 @@
 
 @stack('style')
 <!-- Template CSS -->
-  <link rel="stylesheet" href="{{asset('public/assets/admin')}}/css/style.css">
-  <link rel="stylesheet" href="{{asset('public/assets/admin')}}/css/components.css">
+  <link rel="stylesheet" href="{{asset('assets/admin')}}/css/style.css">
+  <link rel="stylesheet" href="{{asset('assets/admin')}}/css/components.css">
 </head>

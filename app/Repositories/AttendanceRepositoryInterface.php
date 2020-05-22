@@ -8,7 +8,7 @@ interface AttendanceRepositoryInterface
      * @param int $userId
      * @return array
      */
-    public function getBy(int $userId): array;
+    public function getAttendanceWorkByUserId(int $userId): array;
 
     /**
      * @param array $data

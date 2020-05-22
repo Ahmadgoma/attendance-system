@@ -29,6 +29,6 @@ class AttendanceController extends Controller
     public function show(int $id): View
     {
         $result = $this->attendanceService->getEmployees($id);
-        return view('backend.employees.view', compact('result'));
+        return view('dashboard.employees.view', compact('result'));
     }
 }

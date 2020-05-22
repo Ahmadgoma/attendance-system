@@ -5,7 +5,7 @@
           href="{{asset('public/assets/admin/')}}/datatables.net-select-bs4/css/select.bootstrap4.min.css">
     <link rel="stylesheet" href="{{asset('public/assets/admin/')}}/css/bootstrap-tagsinput.css">
 @endpush
-@extends('backend.dashboard' , ['title' => 'Employees'])
+@extends('dashboard.dashboard' , ['title' => 'Employees'])
 @section('content')
     <section class="section">
         <div class="section-header">

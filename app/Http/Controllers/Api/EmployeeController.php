@@ -27,7 +27,7 @@ class EmployeeController extends ApiController
      */
     public function attendEmployee(): JsonResponse
     {
-        $this->attendanceService->attendEmployee();
+        $this->attendanceService->attendEmployee(auth()->id());
 
         return $this->apiResponse(trans('messages.check_success'),Response::HTTP_CREATED);
     }

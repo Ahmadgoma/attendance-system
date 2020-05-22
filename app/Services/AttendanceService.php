@@ -25,22 +25,23 @@ class AttendanceService implements AttendanceServiceInterface
      */
     public function getEmployees(int $userId): array
     {
-        return $this->attendanceRepository->getBy($userId);
+        return $this->attendanceRepository->getAttendanceWorkByUserId($userId);
     }
 
     /**
+     * @param int $userId
      * @return bool
      */
-    public function attendEmployee(): bool
+    public function attendEmployee(int $userId): bool
     {
         $checkInData = [
             'check_in' => now(),
-            'user_id' => auth()->id()
+            'user_id' => $userId
         ];
 
         $checkOutData = [
             'check_out' => now(),
-            'user_id' => auth()->id()
+            'user_id' => $userId
         ];
 
         $attendanceDay = $this->attendanceRepository->findByDay();

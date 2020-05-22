@@ -30,7 +30,7 @@ class EmployeeController extends Controller
     public function index(): View
     {
         $employees = $this->userService->getEmployees();
-        return view('backend.employees.index', compact('employees'));
+        return view('dashboard.employees.index', compact('employees'));
     }
 
     /** View of creating a new employee
@@ -38,7 +38,7 @@ class EmployeeController extends Controller
      */
     public function create(): View
     {
-        return view('backend.employees.create');
+        return view('dashboard.employees.create');
     }
 
     /**  create a new employee

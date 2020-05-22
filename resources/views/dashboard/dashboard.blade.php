@@ -1,27 +1,27 @@
-@include('backend.partials.header')
+@include('dashboard.partials.header')
 
 <body>
 <div id="app">
     <div class="main-wrapper">
         <div class="navbar-bg"></div>
 
-    @include('backend.partials.navbar')
+    @include('dashboard.partials.navbar')
     {{--sidebar--}}
-    @include('backend.partials.sidebar')
+    @include('dashboard.partials.sidebar')
 
     <!-- Main Content -->
         <div class="main-content">
             @yield('content')
         </div>
 
-        @component('backend.components.footer')
+        @component('dashboard.components.footer')
         @endcomponent
 
     </div>
 </div>
-@include('backend.partials.scripts')
+@include('dashboard.partials.scripts')
 @push('scripts')
-    <script src="{{asset('public/assets/admin/')}}/js/page/index.js"></script>
+    <script src="{{asset('assets/admin/')}}/js/page/index.js"></script>
 @endpush
 
 <!-- Page Specific JS File -->
