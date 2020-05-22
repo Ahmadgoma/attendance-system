@@ -49,12 +49,12 @@ and check-in time and check-out time for each day in month.
 
 Login dashboard:
 ```
-http://localhost/attendence-system/attendance-dashboard/login
+http://localhost:8000/attendance-dashboard/login
 ```
 
 Login api:
 ```
-POST http://localhost/attendence-system/api/login
+POST http://localhost:8000/api/login
 
 headers 
 Accept : application/json
@@ -67,7 +67,7 @@ Body {
 ```
 Check in or out api:
 ```
-GET http://localhost/attendence-system/api/check-in-out
+GET http://localhost:8000/api/check-in-out
 
 Authorization Bearer token
 
