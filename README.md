@@ -2,8 +2,7 @@
 
 Attendance System Sample
 
-This is a system to help managers oversee when employees check in and out at work. 
-The task is divided into two main features.
+This is a system to help managers oversee when employees check in and out at work.
 
 ## Getting Started
 
